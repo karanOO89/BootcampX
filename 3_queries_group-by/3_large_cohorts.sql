@@ -1,0 +1,1 @@
+SELECT cohorts.name as cohort_name, count(students.*) as student_count  FROM cohorts JOIN students on cohorts.id = students.cohort_id GROUP BY cohort_name HAVING count(students.*) >= 18 ORDER By student_count;
